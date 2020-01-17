@@ -39,3 +39,51 @@ https://opennote46.tistory.com/157 <br/>
 ![springmvc_filter_servlet](./images/springmvc_filter_servlet.png)<br/>
 
 <br/>
+
+# Filter
+
+## 스프링부트에서 Filter 설정 방법
+
+### 1. FilterRegistrationBean으로 필터 등록하는 방법
+
+<pre>
+@Slf4j
+public class TestFilter implements Filter {
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+        log.info("init TestFilter");
+    }
+
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        log.info("----------- before filter -----------");
+        filterChain.doFilter(servletRequest, servletResponse);
+        log.info("----------- after filter -----------");
+    }
+
+    @Override
+    public void destroy() {
+        log.info("destroy TestFilter");
+    }
+
+}
+</pre>
+<pre>
+@Configuration
+public class FilterConfiguration implements WebMvcConfigurer {
+
+    @Bean
+    public FilterRegistrationBean getFilterRegistrationBean() {
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new TestFilter());
+        filterRegistrationBean.setOrder(Integer.MIN_VALUE);
+        // filterRegistrationBean.addUrlPatterns("/*");
+        filterRegistrationBean.setUrlPatterns(Arrays.asList("/test/*"));
+        return filterRegistrationBean;
+    }
+
+}
+</pre>
+
+
+https://linked2ev.github.io/gitlog/2019/09/15/springboot-mvc-13-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-MVC-Filter-%EC%84%A4%EC%A0%95/
