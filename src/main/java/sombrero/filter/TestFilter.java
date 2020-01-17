@@ -6,25 +6,28 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+/**
+ * 필터 만들기.
+ */
 @Slf4j
 @WebFilter(urlPatterns = "/test/*")
 public class TestFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        log.info("init TestFilter");
+        log.info("##### [TestFilter] init TestFilter!!");
     }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        log.info("----------- before filter -----------");
+        log.info("##### [TestFilter] ----------- before filter -----------");
         filterChain.doFilter(servletRequest, servletResponse);
-        log.info("----------- after filter -----------");
+        log.info("##### [TestFilter] ----------- after filter -----------");
     }
 
     @Override
     public void destroy() {
-        log.info("destroy TestFilter");
+        log.info("##### [TestFilter] destroy TestFilter!!");
     }
 
 }
