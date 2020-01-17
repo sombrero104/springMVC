@@ -85,6 +85,46 @@ public class FilterConfiguration implements WebMvcConfigurer {
 }
 </pre>
 
+### 2. @WebFilter, @ServletComponentScan 애노테이션으로 필터 등록하는 방법
+
+<pre>
+@Slf4j
+@WebFilter(urlPatterns = "/test/*")
+public class TestFilter implements Filter {
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+        log.info("init TestFilter");
+    }
+
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        log.info("----------- before filter -----------");
+        filterChain.doFilter(servletRequest, servletResponse);
+        log.info("----------- after filter -----------");
+    }
+
+    @Override
+    public void destroy() {
+        log.info("destroy TestFilter");
+    }
+
+}
+</pre>
+<pre>
+@ServletComponentScan
+@Slf4j
+@SpringBootApplication
+public class TestApplication {
+
+    public static void main(String[] args) {
+        log.info("##### logback(lombok) log start!!");
+        SpringApplication.run(TestApplication.class, args);
+    }
+
+}
+</pre>
+
 
 <br/>
 https://linked2ev.github.io/gitlog/2019/09/15/springboot-mvc-13-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-MVC-Filter-%EC%84%A4%EC%A0%95/ <br/>

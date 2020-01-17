@@ -11,13 +11,13 @@ import java.util.Arrays;
 @Configuration
 public class FilterConfiguration implements WebMvcConfigurer {
 
-    @Bean
+    /*@Bean
     public FilterRegistrationBean getFilterRegistrationBean() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new TestFilter());
         filterRegistrationBean.setOrder(Integer.MIN_VALUE);
         // filterRegistrationBean.addUrlPatterns("/*");
         filterRegistrationBean.setUrlPatterns(Arrays.asList("/test/*"));
         return filterRegistrationBean;
-    }
+    }*/
 
 }
