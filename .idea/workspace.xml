@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2ad8e30-f9c7-4f0b-b480-33e74dba31ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sombrero/config/InterceptorConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sombrero/interceptor/TestInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sombrero/filter/TestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sombrero/filter/TestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sombrero/filter/TestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sombrero/filter/TestFilter.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="452">
-              <caret line="200" selection-start-line="200" selection-end-line="200" />
+              <caret line="205" selection-start-line="205" selection-end-line="205" />
             </state>
           </provider>
         </entry>
@@ -155,7 +150,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="557" />
+    <option name="x" value="408" />
     <option name="y" value="23" />
     <option name="width" value="1383" />
     <option name="height" value="998" />
@@ -430,7 +425,8 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="557" y="23" width="1383" height="998" extended-state="0" />
+    <frame x="310" y="23" width="1383" height="998" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23266219" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1062,7 +1058,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
+          <caret line="205" selection-start-line="205" selection-end-line="205" />
         </state>
       </provider>
     </entry>

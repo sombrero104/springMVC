@@ -40,11 +40,19 @@ https://opennote46.tistory.com/157 <br/>
 
 <br/><br/><br/><br/>
 
-# Filter
+# Filter, Interceptor, AOP의 흐름
 
-## 스프링부트에서 Filter 설정 방법
+![springmvc_flow](./images/springmvc_flow.png)<br/>
 
-### 1. FilterRegistrationBean으로 필터 등록하는 방법
+<br/>
+https://goddaehee.tistory.com/154 <br/>
+<br/><br/>
+
+## Filter
+
+### 스프링부트에서 Filter 설정 방법
+
+#### 1. FilterRegistrationBean으로 필터 등록하는 방법
 
 <pre>
 @Slf4j
@@ -85,7 +93,7 @@ public class FilterConfiguration implements WebMvcConfigurer {
 }
 </pre>
 
-### 2. @WebFilter, @ServletComponentScan 애노테이션으로 필터 등록하는 방법
+#### 2. @WebFilter, @ServletComponentScan 애노테이션으로 필터 등록하는 방법
 
 <pre>
 @Slf4j
@@ -130,9 +138,9 @@ public class TestApplication {
 https://linked2ev.github.io/gitlog/2019/09/15/springboot-mvc-13-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-MVC-Filter-%EC%84%A4%EC%A0%95/ <br/>
 <br/><br/><br/><br/>
 
-# Interceptor
+## Interceptor
 
-## 스프링부트에서 Interceptor 설정 방법
+### 스프링부트에서 Interceptor 설정 방법
 
 <pre>
 @Slf4j
@@ -196,5 +204,10 @@ public class InterceptorConfiguration implements WebMvcConfigurer {
 
 <br/>
 https://elfinlas.github.io/2017/12/28/SpringBootInterceptor/ <br/>
-<br/>
+<br/><br/><br/><br/>
+
+## AOP
+
+### 스프링부트에서 AOP 설정 방법
+
 
