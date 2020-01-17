@@ -44,7 +44,6 @@ https://opennote46.tistory.com/157 <br/>
 
 ![springmvc_flow](./images/springmvc_flow.png)<br/>
 
-<br/>
 https://goddaehee.tistory.com/154 <br/>
 <br/><br/>
 
