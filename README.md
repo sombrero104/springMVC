@@ -227,9 +227,98 @@ https://elfinlas.github.io/2017/12/28/SpringBootInterceptor/ <br/>
 포인트컷과 어드바이스의 결합이다. 어떤 포인트컷 메소드에 대해 어떤 어드바이스 메소드를 실행할지 결정한다.<br/>
 <br/>
 https://sjh836.tistory.com/157 <br/>
-<br/><br/>
+<br/><br/><br/><br/>
 
 ## 스프링부트에서 AOP 설정 방법
+최상단 패키지의 클래스에 @EnableAspectJAutoProxy를 붙이고, <br/>
+애스팩트를 설정할 클래스를 만든 후 @Aspect를 붙인다. <br/>
+<pre>
+/**
+ * AOP 테스트.
+ *
+ * 예제로 사용할 대상은 'sombrero.service.*.*(..)'
+ * => sombrero.service 패키지의 모든 클래스의 모든 메소드
+ */
+@Aspect
+@Component
+@Slf4j
+public class TestAspect {
+
+    /**
+     * @Before
+     * 메서드의 실행 전에 공통로직을 적용하고 싶을 때 사용.
+     */
+    @Before("execution(* sombrero.service.*.*(..))")
+    public void before(JoinPoint joinPoint) {
+        log.info("##### [TestAspect] ----------- Before -----------");
+    }
+
+    /**
+     * @After
+     * 메서드의 실행 후에 공통로직을 적용하고 싶을 때 사용.
+     */
+    @After("execution(* sombrero.service.*.*(..))")
+    public void after(JoinPoint joinPoint) {
+        log.info("##### [TestAspect] ----------- After -----------");
+    }
+
+    /**
+     * @AfterReturning
+     * 대상 객체의 메서드가 예외 없이 실행한 이후에 공통 기능을 실행.
+     */
+    @AfterReturning(pointcut = "execution(* sombrero.service.*.*(..))", returning = "str")
+    public void afterReturning(JoinPoint joinPoint, Object str) {
+        log.info("##### [TestAspect] ----------- AfterReturning, str: " + str + " -----------");
+    }
+
+    /**
+     * @AfterThrowing
+     * 대상 객체의 메서드를 실행하는 도중 예외가 발생한 경우에 공통 기능을 실행.
+     */
+    @AfterThrowing(pointcut = "execution(* sombrero.service.*.*(..))", throwing = "ex")
+    public void afterThrowing(JoinPoint joinPoint, Throwable ex) {
+        log.info("##### [TestAspect] ----------- AfterThrowing, ex: " + ex + " -----------");
+    }
+
+    /**
+     * 포인트컷을 각 메소드가 아닌 한곳에서 설정하고 싶을 때 사용.
+     */
+    @Pointcut("execution(* sombrero.service.*.*(..))")
+    public void pointcut() {}
+
+    /**
+     * @Around
+     * 메서드의 실행 전/후에 공통로직을 적용하고 싶을 때 사용.
+     */
+    @Around("pointcut()")
+    public void around(ProceedingJoinPoint joinPoint) throws Throwable {
+        log.info("##### [TestAspect] ----------- Around, Start ("
+                + joinPoint.getSignature().getDeclaringTypeName() + " / "
+                + joinPoint.getSignature().getName()
+                + ") -----------");
+        joinPoint.proceed();
+        log.info("##### [TestAspect] ----------- Around, End ("
+                + joinPoint.getSignature().getDeclaringTypeName() + " / "
+                + joinPoint.getSignature().getName()
+                + ") -----------");
+    }
+
+}
+</pre>
+<pre>
+@EnableAspectJAutoProxy // AOP 설정. (최상단 패키지에..)
+@ServletComponentScan // 필터 설정. (애노테이션 방법.)
+@Slf4j // Slf4j 롬북 (스프링부트에 이미 Slf4j와 로그백이 포함되어 있음. 롬북만 의존성 추가해서 사용하면 됨.)
+@SpringBootApplication
+public class TestApplication {
+
+    public static void main(String[] args) {
+        log.info("##### logback(lombok) log start!!");
+        SpringApplication.run(TestApplication.class, args);
+    }
+
+}
+</pre>
 
 https://jeong-pro.tistory.com/171 <br/>
 <br/><br/><br/><br/>
