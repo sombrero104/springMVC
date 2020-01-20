@@ -1,4 +1,4 @@
-package sombrero;
+package sombrero.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
