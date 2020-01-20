@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2ad8e30-f9c7-4f0b-b480-33e74dba31ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sombrero/aspect/TestAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sombrero/aspect/TestAspect.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,16 +23,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sombrero/aspect/TestAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+            <state relative-caret-position="424">
+              <caret line="78" column="1" lean-forward="true" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#423#424#0" expanded="true" />
                 <element signature="e#441#442#0" expanded="true" />
                 <element signature="e#696#697#0" expanded="true" />
                 <element signature="e#773#774#0" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
-                <element signature="e#1446#1447#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,7 +165,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="504" />
+    <option name="x" value="452" />
     <option name="y" value="23" />
     <option name="width" value="1383" />
     <option name="height" value="998" />
@@ -458,7 +455,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="504" y="23" width="1383" height="998" extended-state="0" />
+    <frame x="537" y="23" width="1383" height="998" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28709918" />
@@ -1096,16 +1093,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sombrero/aspect/TestAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+        <state relative-caret-position="424">
+          <caret line="78" column="1" lean-forward="true" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#423#424#0" expanded="true" />
             <element signature="e#441#442#0" expanded="true" />
             <element signature="e#696#697#0" expanded="true" />
             <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
           </folding>
         </state>
       </provider>

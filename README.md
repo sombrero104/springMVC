@@ -209,4 +209,21 @@ https://elfinlas.github.io/2017/12/28/SpringBootInterceptor/ <br/>
 
 ## 스프링부트에서 AOP 설정 방법
 
+https://jeong-pro.tistory.com/171 <br/>
+<br/><br/>
 
+# Filter, Interceptor, AOP 실행 결과
+http://localhost:8080/test/test_aspect 실행 시 아래와 같은 순서대로 로그가 출력된다. <br/>
+<pre>
+##### [TestFilter] ----------- before filter -----------
+##### [TestInterceptor] ----------- preHandle -----------
+##### [TestAspect] ----------- Around, Start (sombrero.service.TestService / test_aspect) -----------
+##### [TestAspect] ----------- Before -----------
+##### TestService - test_aspect()!!
+##### [TestAspect] ----------- Around, End (sombrero.service.TestService / test_aspect) -----------
+##### [TestAspect] ----------- After -----------
+##### [TestAspect] ----------- AfterReturning, str: null -----------
+##### [TestInterceptor] ----------- postHandle -----------
+##### [TestInterceptor] ----------- afterCompletion -----------
+##### [TestFilter] ----------- after filter -----------
+</pre>

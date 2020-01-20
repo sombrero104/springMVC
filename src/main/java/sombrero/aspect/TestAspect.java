@@ -35,6 +35,10 @@ public class TestAspect {
         log.info("##### [TestAspect] ----------- After -----------");
     }
 
+    /**
+     * @AfterReturning
+     * 대상 객체의 메서드가 예외 없이 실행한 이후에 공통 기능을 실행.
+     */
     @AfterReturning(pointcut = "execution(* sombrero.service.*.*(..))", returning = "str")
     public void afterReturning(JoinPoint joinPoint, Object str) {
         log.info("##### [TestAspect] ----------- AfterReturning, str: " + str + " -----------");
@@ -49,26 +53,27 @@ public class TestAspect {
         log.info("##### [TestAspect] ----------- AfterThrowing, ex: " + ex + " -----------");
     }
 
+    /**
+     * 포인트컷을 각 메소드가 아닌 한곳에서 설정하고 싶을 때 사용.
+     */
     @Pointcut("execution(* sombrero.service.*.*(..))")
-    public void pointcut(JoinPoint joinPoint) {
-        log.info("##### [TestAspect] ----------- Pointcut -----------");
-    }
+    public void pointcut() {}
 
     /**
      * @Around
      * 메서드의 실행 전/후에 공통로직을 적용하고 싶을 때 사용.
      */
-    @Around("execution(* sombrero.service.*.*(..))")
+    @Around("pointcut()")
     public void around(ProceedingJoinPoint joinPoint) throws Throwable {
-        log.info("##### [TestAspect] ----------- Around start "
-                + joinPoint.getSignature().getDeclaringTypeName()
+        log.info("##### [TestAspect] ----------- Around, Start ("
+                + joinPoint.getSignature().getDeclaringTypeName() + " / "
                 + joinPoint.getSignature().getName()
-                + " -----------");
+                + ") -----------");
         joinPoint.proceed();
-        log.info("##### [TestAspect] ----------- Around end "
-                + joinPoint.getSignature().getDeclaringTypeName()
+        log.info("##### [TestAspect] ----------- Around, End ("
+                + joinPoint.getSignature().getDeclaringTypeName() + " / "
                 + joinPoint.getSignature().getName()
-                + " -----------");
+                + ") -----------");
     }
 
 }
