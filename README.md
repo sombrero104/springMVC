@@ -338,3 +338,25 @@ http://localhost:8080/test/test_aspect 실행 시 아래와 같은 순서대로 
 ##### [TestInterceptor] ----------- afterCompletion -----------
 ##### [TestFilter] ----------- after filter -----------
 </pre>
+아래는 내부적으로 실행되는 순서. <br/>
+<pre>
+1. Filter의 before수행.
+
+2. Interceptor의 preHandle 수행.
+DispatcherServlet의 500번 라인
+‘if (!mappedHandler.applyPreHandle(processedRequest, response)) {‘
+에서 Interceptor의 preHandle 수행.
+
+3. AOP 수행.(Service의 메소드에 설정한 AOP)
+인터셉터 수행이 완료되면 DispatcherServlet의 504번 라인
+‘mv = ha.handle(processedRequest, response, mappedHandler.getHandler());’
+에서 invoke 후에 AOP before 수행. -> 이후 AOP after 수행.
+해당 Service 메소드 실행이 완료 되었으므로, Controller의 return 수행.
+
+4. Interceptor의 postHandle 수행.
+DispatcherServlet의 510번 라인
+‘mappedHandler.applyPostHandle(processedRequest, response, mv);’
+에서 Interceptor의 postHandle 수행.
+
+5. 마지막으로 Filter의 after 수행.
+</pre>
