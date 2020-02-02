@@ -6,6 +6,6 @@
 </head>
 <body>
 <h1 th:text="${test}">test</h1>
-<!-- ${test} 값이 없을 경우 test 출력. -->
+<!-- 서버사이드 랜더링을 하면 ${test}가 출력되고, 순수한 html로 호출하면 'test' 출력. -->
 </body>
 </html>
