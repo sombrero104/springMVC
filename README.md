@@ -360,3 +360,8 @@ DispatcherServlet의 510번 라인
 
 5. 마지막으로 Filter의 after 수행.
 </pre>
+
+# Tomcat
+### 외장 톰캣
+startup.sh -> catalina.sh -> Bootstrap.class init() -> Catalina.class start()
+### 내장 톰캣
