@@ -363,5 +363,5 @@ DispatcherServlet의 510번 라인
 
 # Tomcat
 ### 외장 톰캣
-startup.sh -> catalina.sh -> Bootstrap.class init() -> Catalina.class start()
+startup.sh -> catalina.sh -> Bootstrap.class init() -> Catalina.class start() <br/>
 ### 내장 톰캣
