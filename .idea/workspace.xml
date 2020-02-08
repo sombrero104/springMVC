@@ -41,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="372" lean-forward="true" selection-start-line="372" selection-end-line="372" />
+            <state relative-caret-position="196">
+              <caret line="354" lean-forward="true" selection-start-line="354" selection-end-line="354" />
             </state>
           </provider>
         </entry>
@@ -50,8 +50,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar!/org/springframework/boot/web/embedded/tomcat/TomcatServletWebServerFactory.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="387">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar!/org/springframework/boot/web/embedded/tomcat/TomcatWebServer.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="64" column="33" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -468,20 +477,20 @@
     <frame x="410" y="23" width="1474" height="998" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49905837" visible="true" weight="0.1599162" />
-      <window_info id="Structure" order="1" sideWeight="0.50094163" side_tool="true" visible="true" weight="0.1599162" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.1599162" />
+      <window_info id="Structure" order="1" sideWeight="0.50164473" side_tool="true" visible="true" weight="0.1599162" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36313465" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4139073" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4139073" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289183" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3289183" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1187,13 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar!/org/springframework/boot/web/embedded/tomcat/TomcatWebServer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="67" column="21" lean-forward="true" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar!/org/springframework/context/support/AbstractApplicationContext.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1217,15 +1219,22 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar!/org/springframework/boot/web/embedded/tomcat/TomcatServletWebServerFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="387">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar!/org/springframework/boot/web/embedded/tomcat/TomcatWebServer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="372" lean-forward="true" selection-start-line="372" selection-end-line="372" />
+        <state relative-caret-position="196">
+          <caret line="354" lean-forward="true" selection-start-line="354" selection-end-line="354" />
         </state>
       </provider>
     </entry>
