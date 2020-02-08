@@ -369,6 +369,7 @@ startup.sh -> catalina.sh -> Bootstrap.class init() -> Catalina.class start() <b
 SpringApplication.class run() -> <br/>
 SpringApplication.class refreshContext() -> SpringApplication.class refresh() -> <br/>
 ServletWebServerApplicationContext.class refresh() -> AbstractApplicationContext.class refresh() -> <br/>
-ServletWebServerApplicationContext.class onRefresh() -> ServletWebServerApplicationContext.class createWebServer() -> <br/>
+ServletWebServerApplicationContext.class onRefresh() -> <br/>
+ServletWebServerApplicationContext.class createWebServer() -> <br/>
 TomcatServletWebServerFactory.class getWebServer() -> TomcatWebServer.class initialize() -> Tomcat.class start() <br/>
 <br/><br/>
