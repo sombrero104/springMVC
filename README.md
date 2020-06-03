@@ -35,7 +35,11 @@ Filter에서 하는 대표적인 처리를 보면 Encoding이 있다.
 
 ![handlerAdapter_01](./images/handlerAdapter_01.png)<br/>
 
+---
+
 ![handlerAdapter_aop_01](./images/handlerAdapter_aop_01.png)<br/>
+
+---
 
 ![handlerAdapter_aop_02](./images/handlerAdapter_aop_02.png)<br/>
 
