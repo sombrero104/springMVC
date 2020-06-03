@@ -31,7 +31,11 @@ Filter에서 하는 대표적인 처리를 보면 Encoding이 있다.
 6. Interceptor의 afterCompletion을 실행.
 <br/><br/>
 
+---
+
 ![springmvc_lifecycle_03](./images/springmvc_lifecycle_03.png)<br/>
+
+---
 
 ![handlerAdapter_01](./images/handlerAdapter_01.png)<br/>
 
@@ -39,9 +43,9 @@ Filter에서 하는 대표적인 처리를 보면 Encoding이 있다.
 
 ![handlerAdapter_aop_01](./images/handlerAdapter_aop_01.png)<br/>
 
----
-
 ![handlerAdapter_aop_02](./images/handlerAdapter_aop_02.png)<br/>
+
+---
 
 https://all-record.tistory.com/164 <br/>
 https://jistol.github.io/java/2018/03/17/spring-mvc-structure/ <br/>
